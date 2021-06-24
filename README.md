@@ -8,21 +8,6 @@ Deduction, FSCD 2021, July 17-24, 2021, Buenos Aires, Argentina
 (Virtual Conference), volume 195 of LIPIcs, pages 16:1-16:19,
 doi:10.4230/LIPIcs.FSCD.2021.16.  
 
-To compile, you need OCamlMakefile.  
-- Write the location of the OCamlMakefile in `eval*/Makefile` and `make`.  
-- To execute the interpreter, run `./interpreter` and input the program into the standard input.  
-Example inputs:  
-```
-1 + reset (reset (2 * reset ((fun y -> shift h -> y) (shift f -> shift g -> 3 + f 4))))
-
-1 + reset (reset (2 * reset ((fun y -> control h -> y) (control f -> control g -> 3 + f 4))))
-
-1 + reset (reset (2 * reset ((fun y -> shift0 h -> y) (shift0 f -> shift0 g -> 3 + f 4))))
-
-1 + reset (reset (2 * reset ((fun y -> control0 h -> y) (control0 f -> control0 g -> 3 + f 4)))
-```  
-
-
 - eval1/		Listing 1: definitional interpreter  
 - eval2/		Listing 2: defunctionalized interpreter  
 - eval3/		Listing 3: linearized interpreter  
@@ -35,3 +20,18 @@ Example inputs:
 - eval9/		Listing 9: interpreter with defunctionalized instructions  
 - eval10/		(Listing 10): interpreter with linearized instructions  
 - eval11/		Listing 11: interpreter with linearized trails  
+
+
+To compile, you need OCamlMakefile.  
+- Write the location of the OCamlMakefile in `eval*/Makefile` and `make`.  
+- To execute the interpreter, run `./interpreter` and input the program into the standard input.  
+Example inputs:  
+```
+1 + reset (reset (2 * reset ((fun y -> shift h -> y) (shift f -> shift g -> 3 + f 4))))
+
+1 + reset (reset (2 * reset ((fun y -> control h -> y) (control f -> control g -> 3 + f 4))))
+
+1 + reset (reset (2 * reset ((fun y -> shift0 h -> y) (shift0 f -> shift0 g -> 3 + f 4))))
+
+1 + reset (reset (2 * reset ((fun y -> control0 h -> y) (control0 f -> control0 g -> 3 + f 4)))
+```    
