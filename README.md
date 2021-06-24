@@ -13,8 +13,8 @@ OCamlMakefile in eval*/Makefile and make.  To execute the interpreter,
 run ./interpreter and input the program into the standard input.
 Example inputs:
 
-`
-1 + reset (reset (2 * reset ((fun y -> shift h -> y)
+
+`1 + reset (reset (2 * reset ((fun y -> shift h -> y)
     	  	      	     (shift f -> shift g -> 3 + f 4))))
 
 1 + reset (reset (2 * reset ((fun y -> control h -> y)
@@ -24,8 +24,7 @@ Example inputs:
     	  	      	     (shift0 f -> shift0 g -> 3 + f 4))))
 
 1 + reset (reset (2 * reset ((fun y -> control0 h -> y)
-    	  	      	     (control0 f -> control0 g -> 3 + f 4)))
-`  
+    	  	      	     (control0 f -> control0 g -> 3 + f 4)))`   
 
 eval1/		Listing 1: definitional interpreter  
 eval2/		Listing 2: defunctionalized interpreter  
