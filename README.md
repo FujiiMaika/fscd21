@@ -8,11 +8,11 @@ Deduction, FSCD 2021, July 17-24, 2021, Buenos Aires, Argentina
 (Virtual Conference), volume 195 of LIPIcs, pages 16:1-16:19,
 doi:10.4230/LIPIcs.FSCD.2021.16.  
 
-To compile, you need OCamlMakefile.  Write the location of the
-OCamlMakefile in eval*/Makefile and make.  To execute the interpreter,
-run ./interpreter and input the program into the standard input.
-Example inputs:  
+To compile, you need OCamlMakefile.  
+- Write the location of the OCamlMakefile in `eval*/Makefile` and `make`.  
+- To execute the interpreter, run `./interpreter` and input the program into the standard input.  
 
+Example inputs:  
 ```
 1 + reset (reset (2 * reset ((fun y -> shift h -> y) (shift f -> shift g -> 3 + f 4))))
 
